@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="太空小孩">
+  <title>音兔 · 音乐节拍预览工具</title>
+  <link href="https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.bootcss.com/wavesurfer.js/2.0.5/wavesurfer.min.js"></script>
+  <script src="https://cdn.bootcss.com/wavesurfer.js/2.0.5/plugin/wavesurfer.regions.min.js"></script>
+  <script src="https://cdn.bootcss.com/wavesurfer.js/2.0.5/plugin/wavesurfer.timeline.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar navbar-light bg-light">
+      <span class="navbar-brand mb-0 h1">音兔 · 音乐节拍预览工具</span>
+    </nav>
+    <div class="card">
+      <div class="card-body">
+        <h5 id="title" class="card-title">讲不出再见</h5>
+        <h6 id="artist" class="card-subtitle mb-2 text-muted">谭咏麟</h6>
+        <h6 class="mb-2">
+          <span id="badge-beats" class="badge badge-dark">8/8</span>
+          <span id="badge-bpm" class="badge badge-dark">BPM 146.001</span>
+          <span id="badge-id" class="badge badge-light">ID 102299</span>
+        </h6>
+        <h6 class="mb-2">
+          <a id="link" href="https://y.qq.com/n/yqq/song/0049FHAV06nSRN.html" target="_blank">https://y.qq.com/n/yqq/song/0049FHAV06nSRN.html</a>
+        </h6>
+        <div id="wave-timeline"></div>
+        <div id="waveform"></div>
+        <div id="wave-controls">
+          <!--<p align="center">
+            <span class="waveform-counter">00:00</span> / <span class="waveform-duration">00:00</span>
+          </p>
+          <p align="center">
+            <button class="btn btn-primary" onclick="wavesurfer.playPause()">
+              播放 / 暂停
+            </button>
+          </p>-->
+          <form class="container">
+            <div class="form-group row">
+              <label for="zoomLevel" class="col-sm-2 col-form-label">波形图缩放比例</label>
+              <div class="col-sm-10" style="padding: 7px 0;">
+                <input id="zoomLevel" class="slider" type="range" min="1" max="100" value="20">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
